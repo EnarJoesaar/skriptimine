@@ -1,0 +1,8 @@
+#1/bin/bash
+# Teretab kasutajat
+echo -n "Täna on: "
+# Valjastab kasutajale aja
+date -u
+# Valjastab kasutajale kalendri
+cal
+# skripti lopp

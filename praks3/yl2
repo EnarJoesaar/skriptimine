@@ -1,0 +1,14 @@
+#!/bin/bash
+#shell'i nimi
+cd /var/log
+#liigu /var/log kausta
+for file in *.log
+#tsukkel, mis otsib koik .log lopuga faile
+do
+  rows=$(wc -l $file | awk '{print $1}')
+  #loeb failide ridu ja saadab outputi awk kasule
+  echo "$rows $file"
+  #prindib valja faili nime ja read
+done | sort -nr 
+#jarjestab outputi vastavalt ridu arvule kahanemisjarjekorras (suurimatest vaiksemateni) ja prindib ekraanile
+# Skripti lopp

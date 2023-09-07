@@ -1,0 +1,5 @@
+#!/bin/bash
+# skripti algus
+UPTIME=$(uptime | grep -oP '\d+ day' | cut -d " " -f 1) # leia mitu päeva masin on tööl
+echo "Masin on töötanud $UPTIME päeva" # väljasta tulemus
+# skripti lopp
