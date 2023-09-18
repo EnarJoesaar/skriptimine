@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Loome kausta backup, kui seda veel pole
+mkdir -p ./backup
+
+echo "Sisesta faili nimi millest tahad backup teha: "
+read fail
+
+# Kontrolli, kas kataloog eksisteerib
+if [ ! -d "$fail" ]; then
+  echo "Viga: Kataloogi $fail ei eksisteeri!"
+  exit 1
+fi
+
+# Annab backup failile nime, mis koosneb sisestatud kataloogi nimest ja '.backup.tar.gz'
+nimi="$fail.backup.tar.gz"
+
+# Loob backup kausta, kui seda veel ei ole
+mkdir -p ./backup
+
+# Teeb backup ja salvestab see ./backup kausta
+tar -czvf "./backup/$nimi" "$fail"
+
+echo "Kataloog $fail on kokku pakitud backup faili $nimi."
+
+# Pakime kokku kataloogi test ja salvestame faili test.backup.tar.gz
+tar -czvf ./backup/$(fail).backup.tar.gz ./$(fail)
+
+# Kui kõik läks edukalt, väljastame sõnumi
+echo "Kataloogi test backup edukalt loodud kausta backup!"

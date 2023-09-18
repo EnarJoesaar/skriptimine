@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Sisesta millal soidad ara: "
+read ara
+
+echo "Sisesta reisi ööpäevade arv: "
+read tagasi
+
+summa=$(echo "($ara+$tagasi) % 7" | bc)
+
+echo "Tagasi oled päeval number $summa"

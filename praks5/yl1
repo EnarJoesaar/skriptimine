@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Sisesta a kylje vaartus: "
+read akylg
+
+echo "Sisesta b kylje vaartus: "
+read bkylg
+
+aruudus=$(($akylg**2))
+
+bruudus=$(($bkylg**2))
+
+summa=$(echo "scale=2; sqrt($aruudus+$bruudus)" | bc)
+
+echo "$summa"
+
+

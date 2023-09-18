@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Sisesta a kylje vaartus: "
+read akylg
+
+echo "Sisesta b kylje vaartus: "
+read bkylg
+
+echo "Sisesta c kylje vaartus: "
+read ckylg
+
+summa=$(echo "scale=2; ($akylg+$bkylg+$ckylg) / 2" | bc)
+
+s=$(echo "scale=2; sqrt($summa * ($summa - $akylg) * ($summa - $bkylg) * ($summa - $ckylg))" | bc)
+
+echo "Kolmnurga pindala on $s"

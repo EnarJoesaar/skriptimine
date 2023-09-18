@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Sisesta oma nimi: "
+read nimi
+
+echo "Tere tulemast, $nimi"
+
+echo "Sisesta oma sünniaasta: "
+read vanus
+
+aasta=$(( $(date +%Y) - $vanus ))
+
+echo "$nimi, sina oled $aasta aastat vana."

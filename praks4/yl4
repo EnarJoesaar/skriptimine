@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Küsime kasutajalt reisijate ja kohtade arvu
+read -p "Mitu reisijat on grupis? " reisijad
+read -p "Mitu kohta on bussis? " kohad
+
+# Leiame täielikult täidetud busside arvu ja maha jäänud reisijate arvu
+taitetud_bussid=$((reisijad/kohad))
+mahajaanud_reisijad=$((reisijad%kohad))
+
+# Väljastame tulemused
+echo "Grupis on $reisijad reisijat."
+echo "Bussis on $kohad kohta."
+echo "Täielikult täidetud busse on $taitetud_bussid."
+echo "Maha jäi $mahajaanud_reisijad reisijat."

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Sisesta ainepunktide arv:"
+read ap
+
+echo "Sisesta nädalate arv:"
+read nad
+
+tundide_arv=$(($ap * 26))
+nadalane_ajakulu=$(($tundide_arv / $nad + 1))
+
+echo "Eeldatav ühe nädala ajakulu on $nadalane_ajakulu tundi."

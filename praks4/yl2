@@ -1,0 +1,10 @@
+# Muutuja aasta loomine ja vaartuse andmine (2021)
+aasta=2021
+# Muutuja president loomine ja vaartuse andmine ("Alar Karis")
+president="Alar Karis"
+# Muutuja lause_keskosa loomine ja vaartuse andmine (". aastal valiti Eesti presidendiks ")
+lause_keskosa=". aastal valiti Eesti presidendiks "
+# Muutuja lause loomine, mille vaartuse saamiseks uhendatakse aasta, lause_keskosa ja president
+lause=$(echo "${aasta}${lause_keskosa}${president}")
+# Muutuja lause vaartuse valjastamine ekraanile
+echo $lause

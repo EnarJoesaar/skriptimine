@@ -1,0 +1,7 @@
+#!/bin/bash
+# Skript kusib kasutajalt nime ja tervitab teda
+echo "Tere! Palun sisesta oma ees- ja perenimi: "
+read nimi
+# Valjastame tervituse ja kasutaja nime
+echo "Tere, $nimi!"
+# Skripti lopp

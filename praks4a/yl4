@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Küsi kataloogi nimi, mida soovid kokku pakkida
+echo -n "Sisesta kataloogi nimi, mida soovid kokku pakkida: "
+read DIRNAME
+
+# Kontrolli, kas kataloog eksisteerib
+if [ ! -d "$DIRNAME" ]; then
+  echo "Viga: Kataloogi $DIRNAME ei eksisteeri!"
+  exit 1
+fi
+
+# Annab backup failile nime, mis koosneb sisestatud kataloogi nimest ja '.backup.tar.gz'
+FILENAME="$DIRNAME.backup.tar.gz"
+
+# Loob backup kausta, kui seda veel ei ole
+mkdir -p ./backup
+
+# Tee backup ja salvesta see ./backup kausta
+tar -czvf "./backup/$FILENAME" "$DIRNAME"
+
+echo "Kataloog $DIRNAME on kokku pakitud backup faili $FILENAME."
