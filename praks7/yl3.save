@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Sisesta aja vaart$number -ge 6 -a $number -le 12
+then
+	echo "Tere hommikust!"
+elif test $number -ge 12 -a $number -le 18
+then
+	echo "Tere paevast!"
+elif test $number -ge 18 -a $number -le 22
+then
+	echo "Tere ohtust!"
+elif test $number
+then
+	echo "Head ood!"
+else
+	echo "vigane sisend"
+fi

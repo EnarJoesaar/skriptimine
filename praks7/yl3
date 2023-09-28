@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Sisesta aja vaartus: "
+read number
+
+if [ $number -ge 6 -a $number -lt 12 ]; 
+then
+	echo "Tere hommikust!"
+elif [ $number -ge 12 -a $number -lt 18 ]
+then
+	echo "Tere paevast!"
+elif [ $number -ge 18 -a $number -lt 22 ];
+then
+	echo "Tere ohtust!"
+elif [ $number -ge 22 -a $number -lt 24 ] || [ $number -ge 0 -a $number -lt 6 ];
+then
+	echo "Head ood!"
+else
+	echo "vigane sisend"
+fi

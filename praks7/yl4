@@ -1,0 +1,22 @@
+#!/bin/bash
+
+hour=$(date +"%H")
+
+echo "Sisesta oma nimi: "
+read name
+
+if [ $hour -ge 6 -a $hour -lt 12 ];
+then
+        echo "Tere hommikust, $name!"
+elif [ $hour -ge 12 -a $hour -lt 18 ]
+then
+        echo "Tere paevast, $name!"
+elif [ $hour -ge 18 -a $hour -lt 22 ];
+then
+        echo "Tere ohtust, $name!"
+elif [ $hour -ge 22 -a $hour -lt 24 ] || [ $hour -ge 0 -a $hour -lt 6 ];
+then
+        echo "Head ood, $name!"
+else
+        echo "Vigane sisend"
+fi

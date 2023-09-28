@@ -1,0 +1,21 @@
+#!/bin/bash
+for (( i=1; i<=20; i++ ))
+do
+        if [ $i -eq 1 ]; then
+                echo "$i - ei ole algarv"
+        else
+                jagaja=2
+                jaak=$(($i % $jagaja))
+                while [ $jaak -ne 0 ]
+                do
+                        jagaja=$(($jagaja + 1))
+                        jaak=$(($i % $jagaja))
+                done
+                if [ $i -eq $jagaja ]; then
+                        echo "$i - on algarv"
+                else
+                        echo "$i - ei ole algarv"
+                fi
+        fi
+done
+# skripti lopp

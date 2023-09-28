@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Sisesta kuu number: "
+read kuu
+case $kuu in
+	1)echo "See on jaanuari kuu";;
+	2)echo "See on veebruari kuu";;
+	3)echo "See on m4rtsi kuu";;
+	4)echo "See on aprilli kuu";;
+	5)echo "See on mai kuu";;
+	6)echo "See on juuni kuu";;
+	7)echo "See on juuli kuu";;
+	8)echo "See on august kuu";;
+	9)echo "See on septembri kuu";;
+	10)echo "See on oktoobri kuu";;
+	11)echo "See on novembri kuu";;
+	12)echo "See on detsembri kuu";;
+	*)echo "Sellise numbriga kuud ei eksisteeri";;
+esac
+# skripti lopp
